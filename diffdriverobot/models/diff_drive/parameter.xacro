@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wwww.ros.org/wiki/xacro">
+
+ <!-- Define parameter for the differential drive robot -->
+ <!-- Parameter for the chassis, size [m] and mass [kg] -->
+ <xacro:property name="x_chassis" value="0.2" />
+ <xacro:property name="y_chassis" value="0.12" />
+ <xacro:property name="z_chassis" value="0.05" />
+ <xacro:property name="m_chassis" value="1.0" />
+
+
+ <!-- Parameter for the chassis, size [m] and mass [kg] -->
+ <xacro:property name="x_left_clamp" value="0.04" />
+ <xacro:property name="y_left_clamp" value="0.005" />
+ <xacro:property name="z_left_clamp" value="0.05" />
+ <xacro:property name="m_left_clamp" value="0.5" />
+
+ <!-- Parameter for the chassis, size [m] and mass [kg] -->
+ <xacro:property name="x_right_clamp" value="0.04" />
+ <xacro:property name="y_right_clamp" value="0.005" />
+ <xacro:property name="z_right_clamp" value="0.05" />
+ <xacro:property name="m_right_clamp" value="0.5" />
+
+ <!-- Parameter for the wheels, radius [m], height [m], mass [kg], torque [Nm], wheelbase [m] -->
+ <xacro:property name="r_wheel" value="0.05" />
+ <xacro:property name="h_wheel" value="0.01" />
+ <xacro:property name="m_wheel" value="0.30" />
+ <xacro:property name="torque_wheel" value="10" />
+ <xacro:property name="L_wheel" value="0.01788" />
+
+ <!-- Parameter for the wheels, radius [m], height [m], mass [kg], torque [Nm], wheelbase [m] -->
+ <xacro:property name="cr_wheel" value="0.0125" />
+ <xacro:property name="cm_wheel" value="3.0" />
+ <xacro:property name="ctorque_wheel" value="10" />
+ 
+ <xacro:property name="camera_link" value="0.0025" /> <!-- Size of square 'camera' box -->
+ <xacro:property name="laser_link" value="0.001" /> <!-- Size of square 'camera' box -->
+
+</robot>
