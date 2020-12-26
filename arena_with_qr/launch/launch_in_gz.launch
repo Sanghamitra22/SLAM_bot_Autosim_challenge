@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<launch>
+        <!-- overwriting these args -->
+        <arg name="debug" default="false" />
+        <arg name="gui" default="true" />
+        <arg name="pause" default="false" />
+        <arg name="world" default="/home/karthikswami/autosim_ws/src/arena_with_qr/world/cubes_and_qr_arena.world" />
+
+        <!-- include gazebo_ros launcher -->
+        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+                <arg name="world_name" value="$(arg world)" />
+                <arg name="debug" value="$(arg debug)" />
+                <arg name="gui" value="$(arg gui)" />
+                <arg name="paused" value="$(arg pause)" />
+                <arg name="use_sim_time" value="true" />
+        </include>
+    <!-- This command builds the urdf files from the xacro files by calling the launch file -->
+    <param name="diff_drive_description" command="$(find xacro)/xacro --inorder '$(find arena_with_qr)/models/diff_drive/diff_drive.xacro'"/>
+
+    <!-- Spawn the robot after we built the urdf files -->
+    <node name="diff_drive_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param diff_drive_description -x -1.192721 -y -1.559949 -z 0.170097 -R 0 -P 0 -Y 1.603571 -model diff_drive"/>
+
+    <!-- Publish the TFs -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" >
+        <remap from="robot_description" to="diff_drive_description" />
+    </node>
+</launch>
