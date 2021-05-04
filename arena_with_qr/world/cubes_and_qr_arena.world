@@ -2,7 +2,7 @@
   <world name='default'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
-      <pose>0 0 10 0 -0 0</pose>
+      <pose frame=''>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
@@ -64,7 +64,7 @@
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
-    <physics type='ode'>
+    <physics name='default_physics' default='0' type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
@@ -96,13 +96,13 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0.909628 -3.09406 0 0 -0 0</pose>
+      <pose frame=''>0.909628 -3.09406 0 0 -0 0</pose>
     </model>
     <model name='sample_arena_urdf'>
       <link name='base'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <mass>2994.3</mass>
           <inertia>
             <ixx>8712.4</ixx>
@@ -114,7 +114,7 @@
           </inertia>
         </inertial>
         <collision name='base_collision'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
@@ -136,7 +136,7 @@
           </surface>
         </collision>
         <visual name='base_visual'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
@@ -148,10 +148,10 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>0 0 0 0 -0 0</pose>
+      <pose frame=''>0 0 0 0 -0 0</pose>
     </model>
     <model name='unit_box'>
-      <pose>-1.298 3.61648 0.5 0 -0 0</pose>
+      <pose frame=''>-1.298 3.61648 0.5 0 -0 0</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -163,7 +163,7 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -204,7 +204,7 @@
       </link>
     </model>
     <model name='unit_box_clone'>
-      <pose>-1.00686 1.19754 0.176193 0.01857 0.001809 -0.000392</pose>
+      <pose frame=''>-1.00686 1.19754 0.176193 0.01857 0.001809 -0.000392</pose>
       <link name='link'>
         <inertial>
           <mass>1</mass>
@@ -216,7 +216,7 @@
             <iyz>0</iyz>
             <izz>0.166667</izz>
           </inertia>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
         </inertial>
         <collision name='collision'>
           <geometry>
@@ -257,70 +257,73 @@
       </link>
     </model>
     <state world_name='default'>
-      <sim_time>49 28000000</sim_time>
-      <real_time>51 120188317</real_time>
-      <wall_time>1604060227 946408388</wall_time>
-      <iterations>49028</iterations>
+      <sim_time>478 505000000</sim_time>
+      <real_time>261 878445326</real_time>
+      <wall_time>1609148392 188438045</wall_time>
+      <iterations>251197</iterations>
       <model name='Marker10'>
-        <pose>-1.29209 -1.31235 0.187913 0 0 -1.48922</pose>
+        <pose frame=''>-1.13943 -1.37018 0.151081 -0.014639 -0.000769 1.62302</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.29209 -1.31235 0.187913 0 0 -1.48922</pose>
+          <pose frame=''>-1.13943 -1.37018 0.151081 -0.014639 -0.000769 1.62302</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='ground_plane'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose frame=''>0 0 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='sample_arena_urdf'>
-        <pose>0.001386 -0.007364 5.14091 0 1e-06 0.030875</pose>
+        <pose frame=''>0 0 -0 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='base'>
-          <pose>0.001386 -0.007364 5.14091 0 1e-06 0.030875</pose>
-          <velocity>0.00479 0.000631 -0.002813 -0.00012 0.000932 3e-06</velocity>
-          <acceleration>0.302624 -0.452497 -0.009629 0.08886 0.059755 2e-06</acceleration>
-          <wrench>906.146 -1354.91 -28.8311 0 -0 0</wrench>
+          <pose frame=''>0 0 -0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 -0 10.0002 0.000458 -0.001376 0</acceleration>
+          <wrench>1.1e-05 -3.2e-05 29943.6 0 -0 0</wrench>
         </link>
       </model>
       <model name='unit_box'>
-        <pose>-2.11943 1.15583 0.176193 0.01857 0.001809 -0.000392</pose>
+        <pose frame=''>-1.84797 1.06577 0.174195 7e-06 6e-06 0.000374</pose>
         <scale>0.098926 0.097932 0.108286</scale>
         <link name='link'>
-          <pose>-2.11943 1.15583 0.176193 0.01857 0.001809 -0.000392</pose>
-          <velocity>-0.009633 0.003485 -0.015245 -0.062824 -0.175457 -0.000198</velocity>
-          <acceleration>-5.54294 12.3789 17.4644 1.37391 0.143221 1.08991</acceleration>
-          <wrench>-5.54294 12.3789 17.4644 0 -0 0</wrench>
+          <pose frame=''>-1.84797 1.06577 0.174195 7e-06 6e-06 0.000374</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -9.8 0 -0 0</acceleration>
+          <wrench>0 0 -9.8 0 -0 0</wrench>
         </link>
       </model>
       <model name='unit_box_clone'>
-        <pose>-1.00686 1.19754 0.176193 0.01857 0.001809 -0.000392</pose>
+        <pose frame=''>-0.722306 1.06094 0.174246 -8e-06 6e-06 -0.00016</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.00686 1.19754 0.176193 0.01857 0.001809 -0.000392</pose>
+          <pose frame=''>-0.722306 1.06094 0.174246 -8e-06 6e-06 -0.00016</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
+          <acceleration>0.068748 0.21351 9.79126 2.31945 1.25579 -0.020563</acceleration>
+          <wrench>0.068748 0.21351 9.79126 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
-        <pose>0 0 10 0 -0 0</pose>
+        <pose frame=''>0 0 10 0 -0 0</pose>
       </light>
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>-1.0169 -3.08909 1.70849 0 0.547642 1.61937</pose>
+        <pose frame=''>-1.03739 -4.4474 4.44495 0 0.823643 1.33537</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
+    <audio>
+      <device>default</device>
+    </audio>
   </world>
 </sdf>
